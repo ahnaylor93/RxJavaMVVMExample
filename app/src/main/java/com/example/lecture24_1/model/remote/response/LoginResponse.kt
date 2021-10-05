@@ -1,4 +1,4 @@
-package com.example.lecture24_1.api.response
+package com.example.lecture24_1.model.remote.response
 
 data class LoginResponse(
     val token: String?,

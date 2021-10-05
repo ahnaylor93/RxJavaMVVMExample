@@ -1,21 +1,16 @@
-package com.example.lecture24_1.api.myviewmodel
+package com.example.lecture24_1.viewmodel
 
 import android.util.Log
-import android.widget.Toast
 import androidx.databinding.ObservableField
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.lecture24_1.api.ApiClient
-import com.example.lecture24_1.api.request.LoginRequest
-import com.example.lecture24_1.api.response.LoginResponse
+import com.example.lecture24_1.model.remote.request.LoginRequest
+import com.example.lecture24_1.model.remote.response.LoginResponse
 import com.example.lecture24_1.repository.LoginRepository
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class LoginViewModel: ViewModel() {
     val emailId = ObservableField<String>("")

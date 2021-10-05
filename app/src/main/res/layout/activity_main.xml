@@ -6,13 +6,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.lecture24_1.api.myviewmodel.LoginViewModel"/>
+            type="com.example.lecture24_1.viewmodel.LoginViewModel"/>
     </data>
 <LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <EditText
         android:id="@+id/etEmail"

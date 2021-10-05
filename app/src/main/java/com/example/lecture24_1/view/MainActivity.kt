@@ -1,22 +1,17 @@
-package com.example.lecture24_1
+package com.example.lecture24_1.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import com.example.lecture24_1.api.ApiClient
-import com.example.lecture24_1.api.myviewmodel.LoginViewModel
-import com.example.lecture24_1.api.request.LoginRequest
-import com.example.lecture24_1.api.response.LoginResponse
+import com.example.lecture24_1.R
+import com.example.lecture24_1.viewmodel.LoginViewModel
 import com.example.lecture24_1.databinding.ActivityMainBinding
-import io.reactivex.Observable
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     lateinit var viewModel: LoginViewModel
-
-    lateinit var loginResponse: LoginResponse
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

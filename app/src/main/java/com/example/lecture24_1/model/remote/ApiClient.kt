@@ -1,7 +1,6 @@
-package com.example.lecture24_1.api
+package com.example.lecture24_1.model.remote
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
-import io.reactivex.plugins.RxJavaPlugins
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
