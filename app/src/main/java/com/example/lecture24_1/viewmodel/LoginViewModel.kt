@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.lecture24_1.model.remote.request.LoginRequest
 import com.example.lecture24_1.model.remote.response.LoginResponse
-import com.example.lecture24_1.repository.LoginRepository
+import com.example.lecture24_1.model.repository.LoginRepository
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable

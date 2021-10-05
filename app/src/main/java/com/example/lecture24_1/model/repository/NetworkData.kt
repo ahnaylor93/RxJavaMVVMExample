@@ -1,4 +1,4 @@
-package com.example.lecture24_1.repository
+package com.example.lecture24_1.model.repository
 
 import com.example.lecture24_1.model.remote.ApiClient
 import com.example.lecture24_1.model.remote.request.LoginRequest
