@@ -7,12 +7,15 @@ import androidx.lifecycle.ViewModel
 import com.example.lecture24_1.model.remote.request.LoginRequest
 import com.example.lecture24_1.model.remote.response.LoginResponse
 import com.example.lecture24_1.model.repository.LoginRepository
+import com.example.lecture24_1.model.repository.NetworkData
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import javax.inject.Inject
 
-class LoginViewModel: ViewModel() {
+class LoginViewModel @Inject constructor(): ViewModel() {
+
     val emailId = ObservableField<String>("")
     val password = ObservableField<String>("")
 
@@ -23,7 +26,7 @@ class LoginViewModel: ViewModel() {
     fun login(){
         val loginRequest = LoginRequest(emailId.get()?:"NA", password.get()?:"NA")
 
-        val observeLogin = LoginRepository().fetchDataFromNetwork(loginRequest)
+        val observeLogin = LoginRepository(NetworkData()).fetchDataFromNetwork(loginRequest)
 
         observeLogin.subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
